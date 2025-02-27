@@ -1,189 +1,87 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-	<head>
-
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-		<!-- meta tags, fill them with website meta infos -->
-		<meta name="description" content="Description of your web page" /> 
-		<meta name="keywords" content="Keyword 1, Keyword 2, Keyword 3, Keyword 4, Keyword 5 ..."/> 
-		<meta name="author" content="Name of the author/owner of the webpage's content" />
-
-		<!-- favicon, fill with a 512x512px .png image named 'favicon.png' -->
-		<link rel="icon" href="assets/images/favicon/favicon.png"/>
-
-		<!-- website title, visible in the browser window and on link sharing -->
-		<title>Martin Gobert</title>
-
-		<!-- links for extensions and dependencies -->
-
-		<!-- css -->
-		<!-- first link your CSS dependences, here is normalize, a CSS 'reset' for cross-browser appearence uniformity -->
-		<link rel="stylesheet" href="assets/css/normalize.css">
-		<!-- you stylesheet -->
-		<link rel="stylesheet" href="assets/css/my-style.css?ver=1.0">
-
-		<!-- js -->
-		<!-- first link your javascript dependencies, here as an example is Jquery -->
-		<script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
-		<!-- your function scripts -->
-		<script type="text/javascript" src="assets/js/script.js?ver=1.0"></script>
-	    
-	</head>
-
-	<body>
-
-		<!-- webpage content goes here -->
-
-		<div class="page-wrapper">
-
-			<header>
-
-				<h1>Martin Gobert</h1>
-
-					<!--
-				<p class="author-name">und</p>
-
-				<figure>
-
-					<a href="content/Martin_02.jpg" target="_blank">
-				    	<img src="content/Martin_02.jpg" alt="Martin with camera" width="100%" height="auto">
-				    </a>
-
-				    <figcaption>
-
-				    	<p>
-				    		Artist and photographer.
-				    	</p>
-
-				    </figcaption>
-
-				</figure>
-
-				-->
-
-			
-
-			</header>
-
-			<!-- <h2 id="intro">About me</h2>
-
-			<main>
-
-				
-				<p>
-					I am  a working BEEE bzzz....
-
-		
-				</p>
-
-
-				<figure>
-
-					<a href="content/Martin_03.jpg" target="_blank">
-				    	<img src="content/Martin_03.jpg" alt="Martin works" width="100%" height="auto">
-				    </a>
-
-	
-
-				</figure>
-
-				<h2 id="chapter-1">What do I do besides photography?</h2>
-
-				<figcaption>
-
-					<p>
-						Listening to neighbors.....
-					</p>
-
-				</figcaption>
-
-				<figure>
-
-					<a href="content/Martin_01.jpg" target="_blank">
-				    	<img src="content/Martin_01.jpg" alt="Martin listens" width="100%" height="auto">
-				    </a>
-
-		
-
-				</figure>
-
-
-				<figure>
-
-					<figcaption>
-
-				    	<p>
-				    		Brushing my teeth!!!! :D 
-				    	</p>
-
-				    </figcaption>
-
-					<a href="content/teeth.JPG" target="_blank">
-				    	<img src="content/teeth.JPG" alt="Martin being on phone" width="100%" height="auto">
-				    </a>
-
-
-				</figure>
-
-
-				<figure>
-
-					<figcaption>
-
-				    	<p>
-				    		I never sleep, I swear.. 
-				    	</p>
-
-				    </figcaption>
-
-					<a href="content/sleep.JPG" target="_blank">
-				    	<img src="content/sleep.JPG" alt="sleep" width="100%" height="auto">
-				    </a>
-
-
-				</figure>
-
-				
-
-
-
-
-
-
-
-			</section>
-
-				-->
-		
-
-			</main>
-
-
-
-			<footer>
-
-				<hr>
-
-				<p>
-					Last edit date: 2023/12/11
-				</p>
-
-			</footer>
-
-
-
-		</div>
-
-
-
-		<!-- end webpage content -->
-
-
-
-	</body>
-
+  <head>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>👁</text></svg>"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Martin Gobert - Under Construction</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Link to your external CSS -->
+  </head>
+  <body>
+    <header>
+      <h2>
+        Martin Gobert ––––>
+        <i onclick="toggleTextBox()">Visual Artist</i>
+      </h2>
+      <p>
+        <a href="mailto:nitramtrebog@gmail.com">nitramtrebog@gmail.com</a>
+        <br />
+        <a href="https://www.instagram.com/nitramtrebog" target="_blank"
+          >@nitramtrebog</a
+        >
+        <br />
+        +33652117508
+      </p>
+      <h1>
+        <div class="word">
+          <span>W</span><span>E</span><span>B</span><span>S</span><span>I</span
+          ><span>T</span><span>E</span>
+        </div>
+        <div class="word">
+          <span>U</span><span>N</span><span>D</span><span>E</span><span>R</span>
+        </div>
+        <div class="word">
+          <span>C</span><span>O</span><span>N</span><span>S</span><span>T</span
+          ><span>R</span><span>U</span><span>C</span><span>T</span><span>I</span
+          ><span>O</span><span>N</span>
+        </div>
+      </h1>
+    </header>
+
+    <!-- Hidden text box that will appear on top of the page -->
+    <div class="text-box" id="text-box">
+      <p>
+        <b>Martin Gobert</b> (b.2000) is a French visual artist who graduated
+        from the photography department of the Royal Academy of Arts in Den Haag
+        (The Netherlands) in 2024.<br />He worked as an assistant for
+        <i>Helmut Smits</i> (2023), and <i>Thomas Mailaender</i> (2024), which
+        helped him to sharpen his interest in conceptual ideas, using found
+        footage and the everyday as primal material. His work explores the
+        absurdity of human behavior, its environment, and social phenomena. He
+        tends to include himself in his work to better understand what he
+        explores. <br />Martin has a particular interest in the banal and the
+        ordinary. His practice seeks to find things that are no longer
+        considered and put them in the spotlight. Inspired by confusion and
+        playfulness, his work juggles between absurdity and rationality; between
+        humor and seriousness. He likes to create interactive installations that
+        include the viewer which encourages them to reflect on their condition.
+      </p>
+    </div>
+
+    <img
+      src="assets/images/video for under construction webpage_4.gif"
+      alt="construction"
+    />
+
+    <footer>
+      <p>© 2025 Martin Gobert. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // JavaScript function to toggle the visibility of the text box
+      function toggleTextBox() {
+        var textBox = document.getElementById("text-box");
+        // Toggle the display between 'none' and 'block'
+        if (textBox.style.display === "none" || textBox.style.display === "") {
+          textBox.style.display = "block";
+        } else {
+          textBox.style.display = "none";
+        }
+      }
+    </script>
+  </body>
 </html>
