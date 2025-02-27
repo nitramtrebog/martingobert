@@ -1,174 +1,193 @@
-@charset "UTF-8";
-
-/* @FONT FACE (enable the use of 'custom fonts' inside your document) */
-
-/* 
-  You can use 'fontsquirrel' (https://www.fontsquirrel.com) 
-  or 'transfonter' (https://transfonter.org)
-  to generate your own font for the web from .ttf or .oft files 
-*/
-
 @font-face {
-  font-family: "Your Font Name";
-  src: url("../fonts/yourfontname/yourfontname-roman.woff2");
-  font-weight: normal;
+  font-family: "altehaas";
+  src: url("../fonts/altehaas/altehaas-regular.woff") format("woff"),
+    url("../fonts/altehaas/altehaas-regular.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
-  font-display: block;
 }
 
-@font-face {
-  font-family: "Your Font Name";
-  src: url("../fonts/yourfontname/yourfontname-italic.woff2");
-  font-weight: normal;
-  font-style: italic;
-  font-display: block;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "altehaas", sans-serif;
 }
 
-/* VARIABLES */
-
-:root {
-  /* Color values */
-  --color-background: rgba(255, 255, 255, 1);
-  --color-text: rgba(0, 0, 0, 1);
-  --color-text-link: rgba(0, 0, 255, 0.8);
-  --color-text-link-hover: rgba(0, 0, 255, 0.4);
-  /* Font values */
-  --font-family: "Your Font Name", "Helvetica", "Arial", sans-serif;
-  --font-size: 24px;
-  /* Margin value */
-  --margin: 1rem;
-}
-
-/* GENERAL STYLES */
-
-html {
-  font: var(--font-size) var(--font-family);
-  color: var(--color-text);
-  background-color: var(--color-background);
-}
-
+html,
 body {
-  position: relative;
-  background-color: var(--color-background);
-  font: var(--font-size) var(--font-family);
-  color: var(--color-text);
   width: 100%;
-  height: auto;
-  overflow-y: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  text-align: center;
+  overflow-x: hidden;
 }
 
-a {
-  color: var(--color-text-link);
-  text-decoration: underline;
-}
-
-a:hover {
-  color: var(--color-text-link-hover);
-  text-decoration: underline;
+/* HEADER */
+header {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
 }
 
 h1 {
-  /* h1 style */
+  font-size: 3rem;
+  font-weight: bold;
+  color: black;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  text-align: center;
+  display: inline-block;
+}
+
+/* Each word in its own block */
+.word {
+  display: inline-block; /* Keep words inline for desktop */
+  white-space: nowrap;
+  margin: 0 5px;
+}
+
+/* Mobile-friendly text animation */
+h1 span {
+  display: inline-block;
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+h1 span:hover {
+  transform: translateY(-5px) rotate(-5deg);
+  background-color: yellow;
+}
+
+/* CONTACT LINKS */
+header p {
+  margin-top: 10px;
+  font-size: 1rem;
+  text-align: left;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+a:hover {
+  background-color: yellow;
 }
 
 h2 {
-  /* h2 style */
+  text-align: left;
+  font-size: 1.5rem;
 }
 
-h3 {
-  /* h3 style */
+/* TEXT BOX */
+.text-box {
+  display: none; /* Initially hidden */
+  position: fixed; /* Makes the box appear on top of other content */
+  top: 30%; /* Adjust the top position */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Correct centering */
+  padding: 15px; /* Adjust padding */
+  background-color: yellow;
+  width: 80%; /* Responsive width */
+  max-width: 500px; /* Max width */
+  text-align: left;
+  z-index: 9999; /* Ensure it’s on top */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Optional for sticky note effect */
+  overflow: auto; /* Ensure content doesn't overflow */
 }
 
-h4,
-h5,
-h6 {
-  /* h4-h5-h6 style */
+/* Optionally, style the "Visual Artist" link */
+i {
+  cursor: pointer;
 }
 
-p {
-  /* paragraph style */
+i:hover {
+  background-color: yellow;
 }
 
-ol,
-ul {
-  /* ordered list and unordered list styles */
+/* MAIN CONTENT */
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 20px;
 }
 
-blockquote {
-  /* blockquote element style */
+img {
+  max-width: 57%;
+  height: auto;
 }
 
-hr {
-  /* horizontal rule style */
+/* FOOTER */
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: 30px;
 }
 
-/* PAGE STYLES */
-
-/* page structure */
-
-div.page-wrapper {
-  /* the element that 'wraps' everything */
-  padding: var(--margin);
-}
-
-/* navigation */
-
-nav {
-}
-
-/* content */
-
-main {
-}
-
-summary {
-}
-
-/* UTILITY CLASSES */
-
-/* hide desktop mobile etc */
-
-.desktop-only {
-  display: block;
-}
-
-.mobile-only {
-  display: none;
-}
-
-/* WEBSITE MEDIA QUERIES */
-
-/* styles for 'mobile', screen sizes up to 779px, should covers 'mobile' and 'tablet' */
-/* style this one first and then use the subsequent ones in a cascading way (from general to specific) */
-
-@media (max-width: 779px) {
-  /* your 'mobile' overriding css properties here */
-
-  /* utility classes, mobile */
-
-  .desktop-only {
-    display: none;
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.3rem;
   }
 
-  .mobile-only {
-    display: block;
+  i {
+    background-color: yellow;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  a {
+    background-color: yellow;
+    text-decoration: underline;
+  }
+
+  img {
+    max-width: 95%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 2.3rem; /* Adjust font size for mobile */
+  }
+
+  /* Force words to be stacked on smaller screens */
+  .word {
+    display: block; /* This makes each word take up its own line */
+    text-align: center;
+    line-height: 100%;
+    /* Adds space between the words */
+  }
+
+  .text-box {
+    width: 90%; /* Make it slightly larger on smaller screens */
+    max-width: 350px;
+    padding: 12px; /* Reduce padding for small screens */
+    top: 15%; /* Adjust the top positioning for small screens */
   }
 }
 
-/* use this query to apply style changes to smaller smartphones sizes (like an iPhone 5S or SE 2016), max size of 339px */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.3rem; /* Adjust font size for even smaller screens */
+  }
 
-@media (max-width: 339px) {
-  /* your overriding css properties here */
-}
+  a {
+    font-size: 0.9rem;
+  }
 
-/* use this query to apply style changes for 'mobile' screen sizes that are flipped in 'landscape' mode */
-
-@media (max-width: 779px) and (orientation: landscape) {
-  /* your overriding css properties here */
-}
-
-/* use this query to apply style for 'small' desktop screens */
-
-@media (min-width: 780px) and (max-width: 992px) {
-  /* your overriding css properties here */
+  .text-box {
+    width: 90%; /* Ensure it's responsive for very small screens */
+    max-width: 300px; /* Make it smaller for mobile */
+    padding: 10px; /* Further reduce padding for mobile */
+  }
 }
